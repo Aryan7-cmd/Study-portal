@@ -1,0 +1,144 @@
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e293b;
+    padding: 15px 40px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #facc15;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.quiz-section {
+            max-width: 700px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+        }
+.quiz-section {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+.question {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+
+.options button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #3498db;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+.options button:hover {
+            background-color: #2980b9;
+        }
+
+.score {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+.next-btn {
+            background-color: #27ae60;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+.next-btn:hover {
+            background-color: #1e8449;
+        }
+
+button {
+    transition:
+        background-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.15s ease;
+}
+
+button:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.97);
+}
