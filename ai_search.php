@@ -1,11 +1,19 @@
 <?php
 session_start();
-require_once "config.php";
-
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
     exit();
 }
+$envPath = __DIR__ . "/.env";
+if (file_exists($envPath)) {
+    $lines = file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (str_starts_with(trim($line), "#")) continue;
+        putenv(trim($line));
+    }
+}
+
+$apiKey = getenv("OPENAI_API_KEY");
 
 $answer = "";
 
@@ -75,10 +83,11 @@ Output rules:
 
     $ch = curl_init("https://api.openai.com/v1/chat/completions");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        "Content-Type: application/json",
-       "Authorization: Bearer " 
-    ]);
+   curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    "Content-Type: application/json",
+    "Authorization: Bearer " . $apiKey
+]);
+
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
 
