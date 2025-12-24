@@ -120,7 +120,7 @@ Output rules:
         </ul>
     </nav>
 <div class="ai-container">
-    <h2>AI Study Assistant</h2>
+    <h2 style="margin-bottom: 10px;">AI Study Assistant</h2>
 
     <form method="POST">
         <input type="text" name="question" placeholder="Ask a study related question..." required>
