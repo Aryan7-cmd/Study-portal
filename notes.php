@@ -1,11 +1,6 @@
 <?php
-session_start();
 
-if (!isset($_SESSION['user'])) {
-    header("Location: login.php");
-    exit();
-}
-
+require 'auth.php';
 require_once "db.php";
 $user = $_SESSION['user'];
 
