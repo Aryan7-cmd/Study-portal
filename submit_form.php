@@ -31,3 +31,4 @@ if ($stmt->execute()) {
 
 header("Location: contact.php");
 exit;
+?>
