@@ -2,16 +2,7 @@
 
 require 'auth.php';
 
-$envPath = __DIR__ . "/.env";
-if (file_exists($envPath)) {
-    $lines = file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-    foreach ($lines as $line) {
-        if (str_starts_with(trim($line), "#")) continue;
-        putenv(trim($line));
-    }
-}
-
-$apiKey = getenv("OPENAI_API_KEY");
+require_once __DIR__ . '/../config/openai.php';
 
 $answer = "";
 
@@ -83,7 +74,7 @@ Output rules:
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
    curl_setopt($ch, CURLOPT_HTTPHEADER, [
     "Content-Type: application/json",
-    "Authorization: Bearer " . $apiKey
+   "Authorization: Bearer " . OPENAI_API_KEY
 ]);
 
     curl_setopt($ch, CURLOPT_POST, true);
