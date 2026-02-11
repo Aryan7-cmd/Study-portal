@@ -85,7 +85,7 @@ Output rules:
 
     $result = json_decode($response, true);
 
-    $answer = $result["choices"][0]["message"]["content"] ?? "AI could not generate an answer.";
+    $answer = $result["choices"][0]["message"]["content"] ?? "Sorry, I can only give study related answers";
 }
 ?>
 <!DOCTYPE html>
@@ -101,14 +101,14 @@ Output rules:
             <li><a href="index.php">Home</a></li>
             <li><a href="subjects.php">Subjects</a></li>
             <li><a href="notes.php">Notes</a></li>
-            <li><a href="quiz.php">Quiz</a></li>
+             <li><a href="quiz.php" style="color: #facc15;">Quiz</a></li>
              <li><a href="ai_search.php" style="color: orange;">AI Help</a></li>
             <li><a href="contact.php">Contact</a></li>
            <li style="position: relative;">
     <details>
        <summary style="
     cursor: pointer;
-    color: #a2e3ffff;
+    color: rgb(213, 232, 240);
     font-weight: 600;
     padding: 2px 10px;
     border-radius: 20px;

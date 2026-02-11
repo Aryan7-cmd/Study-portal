@@ -20,14 +20,14 @@ $result = mysqli_query($conn, "SELECT * FROM notes ORDER BY created_at DESC");
             <li><a href="index.php">Home</a></li>
             <li><a href="subjects.php">Subjects</a></li>
             <li><a href="notes.php">Notes</a></li>
-            <li><a href="quiz.php">Quiz</a></li>
+             <li><a href="quiz.php" style="color: #facc15;">Quiz</a></li>
              <li><a href="ai_search.php" style="color: orange;">AI Help</a></li>
             <li><a href="contact.php">Contact</a></li>
            <li style="position: relative;">
     <details>
        <summary style="
     cursor: pointer;
-    color: #a2e3ffff;
+     color: rgb(217, 231, 238);
     font-weight: 600;
     padding: 2px 10px;
     border-radius: 20px;

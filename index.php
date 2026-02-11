@@ -19,14 +19,14 @@ require 'auth.php';
             <li><a href="index.php">Home</a></li>
             <li><a href="subjects.php">Subjects</a></li>
             <li><a href="notes.php">Notes</a></li>
-            <li><a href="quiz.php">Quiz</a></li>
+            <li><a href="quiz.php" style="color: #facc15;">Quiz</a></li>
              <li><a href="ai_search.php" style="color: orange;">AI Help</a></li>
             <li><a href="contact.php">Contact</a></li>
            <li style="position: relative;">
     <details>
        <summary style="
     cursor: pointer;
-    color: #a2e3ffff;
+    color: rgb(217, 231, 238);
     font-weight: 600;
     padding: 2px 10px;
     border-radius: 20px;
@@ -64,6 +64,12 @@ require 'auth.php';
         <h1>Welcome to Tech Masters</h1>
         <p>Your one-stop solution for notes, quizzes, and exam preparation.</p><br>
         <a href="subjects.php" class="btn">Get Started</a>
+        <div class="hero-badges">
+    <span>📚 Study Focused</span>
+    <span>🤖 AI Assisted</span>
+    <span>📝 Notes + Quizzes</span>
+</div>
+
     </section>
 
     <!-- Features Section -->
@@ -103,6 +109,33 @@ require 'auth.php';
     <img src="images/images (1).jpg" alt="Study Portal Illustration">
   </div>
 </section>
+<section class="subjects">
+    <h2>Explore Subjects</h2>
+
+    <div class="subject-grid">
+        <div class="subject-card">📘 Mathematics</div>
+        <div class="subject-card">🧪 Chemistry</div>
+        <div class="subject-card">🧬 Biology</div>
+        <div class="subject-card">💻 Computer Science</div>
+        <div class="subject-card">📊 Economics</div>
+        <div class="subject-card">🏢 Business Studies</div>
+    </div>
+</section>
+<!--Ai preview sec-->
+<section class="ai-preview">
+    <h2>AI Study Assistant</h2>
+    <p>Ask academic questions and get student-friendly answers.</p>
+
+    <div class="ai-box">
+        <div class="ai-q">AI Study Assistant:</div>
+        <div class="ai-a">
+            “Ask questions. Understand concepts. Learn smarter — not harder.”
+        </div>
+    </div>
+
+    <a href="ai_search.php" class="ai-btn">Try AI Study Help</a>
+</section>
+
     <section class="features">
         <div class="card">
             <h3>📘 Notes</h3>

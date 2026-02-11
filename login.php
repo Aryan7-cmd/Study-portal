@@ -32,7 +32,7 @@ if (isset($_POST['login'])) {
     <?php if(isset($error)) echo "<div class='error'>$error</div>"; ?>
 
     <form method="POST">
-        <input type="text" name="username" placeholder="Email or Username" required>
+        <input type="text" name="username" placeholder="Email" required>
         <input type="password" name="password" placeholder="Password" required>
         <button name="login">Login</button>
     </form>
