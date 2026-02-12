@@ -2,24 +2,12 @@
 require 'auth.php';
 require 'db.php';
 
-// Fetch user info
 $stmt = $conn->prepare("SELECT id, username, email, joined_date FROM users WHERE username = ?");
 $stmt->bind_param("s", $username);
 $stmt->execute();
 $user_result = $stmt->get_result();
 $user = $user_result->fetch_assoc();
 
-// Fetch study stats
-
-$stmt = $conn->prepare("
-    SELECT quiz_score, notes_completed 
-    FROM study_stats 
-    WHERE user_id = ? AND date = CURDATE()
-");
-$stmt->bind_param("i", $user['id']);
-$stmt->execute();
-$stats_result = $stmt->get_result();
-$stats = $stats_result->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html>

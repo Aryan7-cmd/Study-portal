@@ -11,7 +11,7 @@ require 'auth.php';
 </head>
 <body>
 
- <nav class="navbar">
+  <nav class="navbar">
         <div class="logo">Tech Masters</div>
         <ul class="nav-links">
             <li><a href="index.php">Home</a></li>
@@ -19,17 +19,18 @@ require 'auth.php';
             <li><a href="notes.php">Notes</a></li>
             <li><a href="quiz.php" style="color: #facc15;">Quiz</a></li>
              <li><a href="ai_search.php" style="color: orange;">AI Help</a></li>
+              <li><a href="bookmarks.php" style="color: #ffc107;">🔖 Bookmarks</a></li>
             <li><a href="contact.php">Contact</a></li>
            <li style="position: relative;">
     <details>
        <summary style="
     cursor: pointer;
-     color: rgb(217, 231, 238);
+    color: rgb(217, 231, 238);
     font-weight: 600;
-    padding: 2px 10px;
+    padding: 4px 16px;
     border-radius: 20px;
     background: rgba(56, 189, 248, 0.12);
-   
+   list-style:none;
 ">
     <?= htmlspecialchars($username) ?>
 </summary>
@@ -143,6 +144,7 @@ require 'auth.php';
 </div>
 
     </div>
+    
 </section>
 <script>
 const searchInput = document.querySelector(".subject-search input");

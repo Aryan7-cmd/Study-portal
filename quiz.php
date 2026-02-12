@@ -22,49 +22,53 @@ $page_title = isset($subject_titles[$subject]) ? $subject_titles[$subject] : 'Qu
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="logo">Tech Masters</div>
-    <ul class="nav-links">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="subjects.php">Subjects</a></li>
-        <li><a href="notes.php">Notes</a></li>
-        <li><a href="quiz.php" style="color: #facc15;">Quiz</a></li>
-        <li><a href="ai_search.php" style="color: orange;">AI Help</a></li>
-        <li><a href="contact.php">Contact</a></li>
-        <li style="position: relative;">
-            <details>
-                <summary style="
-                    cursor: pointer;
-                    color: rgb(217, 231, 238);
-                    font-weight: 600;
-                    padding: 2px 10px;
-                    border-radius: 20px;
-                    background: rgba(56, 189, 248, 0.12);
-                ">
-                    <?= htmlspecialchars($username) ?>
-                </summary>
-                <div style="
-                    position: absolute;
-                    top: 35px;
-                    right: 0;
-                    background: #0f172a;
-                    padding: 10px;
-                    border-radius: 6px;
-                    min-width: 140px;
-                    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-                    z-index: 999;
-                ">
-                    <a href="profile.php" style="display:block; margin-bottom:8px;">
-                        Profile
-                    </a>
-                    <a href="logout.php" style="display:block;">
-                        Logout
-                    </a>
-                </div>
-            </details>
-        </li>
-    </ul>
-</nav>
+  <nav class="navbar">
+        <div class="logo">Tech Masters</div>
+        <ul class="nav-links">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="subjects.php">Subjects</a></li>
+            <li><a href="notes.php">Notes</a></li>
+            <li><a href="quiz.php" style="color: #facc15;">Quiz</a></li>
+             <li><a href="ai_search.php" style="color: orange;">AI Help</a></li>
+              <li><a href="bookmarks.php" style="color: #ffc107;">🔖 Bookmarks</a></li>
+            <li><a href="contact.php">Contact</a></li>
+           <li style="position: relative;">
+    <details>
+       <summary style="
+    cursor: pointer;
+    color: rgb(217, 231, 238);
+    font-weight: 600;
+    padding: 4px 16px;
+    border-radius: 20px;
+    background: rgba(56, 189, 248, 0.12);
+   list-style:none;
+">
+    <?= htmlspecialchars($username) ?>
+</summary>
+        <div style="
+            position: absolute;
+            top: 35px;
+            right: 0;
+            background: #0f172a;
+            padding: 10px;
+            border-radius: 6px;
+            min-width: 140px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            z-index: 999;
+        ">
+            <a href="profile.php" style="display:block; margin-bottom:8px;">
+                Profile
+            </a>
+            <a href="logout.php" style="display:block;">
+                Logout
+            </a>
+        </div>
+    </details>
+</li>
+            
+        </ul>
+    </nav>
+
 
 <div class="quiz-container">
     <!-- Subject Selection Sidebar -->
